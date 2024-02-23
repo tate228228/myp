@@ -1,0 +1,135 @@
+@mixin desktop {
+  @media (min-width: 1025px) {
+      @content;
+  }
+}
+
+@mixin avg-desktop {
+  @media (min-width: 1160px) {
+      @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+      @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+      @content;
+  }
+}
+
+
+.social {
+  &-wrapper {
+    height: max-content;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    // @include tablet {
+    //   display: none;
+    // }
+  }
+
+  &-icon {
+    background: transparent;
+    border: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+
+    &:last-of-type {
+      padding: 0;
+    }
+
+    svg {
+      width: 30px;
+      transition: .2s;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        transform: scale(1.15);
+      }
+    }
+
+    &--discord {
+      path {
+        fill: #34BBFF;
+      }
+
+      &:hover,
+      &:focus {
+        path {
+          fill: #FBA41C;
+        }
+      }
+    }
+
+    &--twitter {
+      path {
+        fill: #34BBFF;
+      }
+
+      &:hover,
+      &:focus {
+        path {
+          fill: #FBA41C;
+        }
+      }
+    }
+
+    &--instagram {
+      path {
+        fill: #34BBFF;
+      }
+
+      &:hover,
+      &:focus {
+        path {
+          fill: #FBA41C;
+        }
+      }
+    }
+
+    &--opensea {
+      path {
+        fill: white;
+      }
+
+      &:hover,
+      &:focus {
+        path {
+          fill: #FBA41C;
+        }
+      }
+    }
+  }
+}
+
+
+@include mobile {
+  #add button {
+    font-size: 32px !important;
+  }
+  #add h3 {
+    font-size: 32px !important;
+    text-align: center;
+    margin: 10px 0;
+
+  }
+
+  .first img {
+    max-width: 400px !important;
+  }
+
+  .first .pu {
+    max-width: 50vw !important;
+  }
+}
