@@ -38,7 +38,10 @@ const App = () => {
       <section id="add" className='visible'>
         <h3>UKRAINIAN SOLDIER</h3>
         <img style={{maxWidth: '400px'}} src={keks} alt="unlucky"/>
-        <button onClick={() => document.getElementById("add").classList.remove("visible")}>JOIN TO SUPPORT</button>
+        <button onClick={() => {
+          document.getElementById("add").classList.remove("visible")
+          document.getElementById("root").setAttribute("style", "overflow: auto;");
+          }}>JOIN TO SUPPORT</button>
       </section>
     </div>
   );

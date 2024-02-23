@@ -77,11 +77,13 @@ p {
 }
 
 #add {
+  display: none;
   opacity: 0;
   transition: opacity 500ms;
 }
 
 #add.visible {
+  display: inline;
   opacity: 1;
   transition: opacity 500ms;
   /* pointer-events: all; */
